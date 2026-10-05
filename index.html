@@ -18,7 +18,15 @@
     <a class="marca" href="#inicio" aria-label="Início">
       Renan Batista
     </a>
-    <nav class="menu" aria-label="Navegação principal">
+
+    <!-- Botão Hambúrguer para Mobile -->
+    <button class="btn-hamburguer" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+      <span class="linha"></span>
+      <span class="linha"></span>
+      <span class="linha"></span>
+    </button>
+
+    <nav class="menu" id="menu-principal" aria-label="Navegação principal">
       <ul>
         <li><a class="menu-link" href="#inicio">Início</a></li>
         <li><a class="menu-link" href="#sobre">Sobre</a></li>
@@ -46,7 +54,7 @@
       <article class="painel">
         <p class="sobretitulo">Perfil Profissional</p>
         <h2 id="titulo-sobre">Sobre <em>Mim</em></h2>
-        <p>Sou acadêmico de Sistemas de Informação no IFSULDEMINAS (Campus Machado) e possuo formação técnica em TI pelo SENAC[cite: 32]. Tenho foco no desenvolvimento de aplicações web, bancos de dados relacionais e criação de jogos no Godot Engine, combinando raciocínio lógico, código limpo e atenção à experiência do usuário.</p>
+        <p>Sou acadêmico de Sistemas de Informação no IFSULDEMINAS (Campus Machado) e possuo formação técnica em TI pelo SENAC. Tenho foco no desenvolvimento de aplicações web, bancos de dados relacionais e criação de jogos no Godot Engine, combinando raciocínio lógico, código limpo e atenção à experiência do usuário.</p>
       </article>
     </section>
 
@@ -96,12 +104,12 @@
         <p>Conecte-se comigo pelas redes sociais ou envie uma mensagem direta.</p>
 
         <address>
-          E-mail: <a href="mailto:renanbatistaalf@email.com">renanbatistaalf@email.com</a>[cite: 32]
+          E-mail: <a href="mailto:renanbatistaalf@email.com">renanbatistaalf@email.com</a>
         </address>
 
         <nav class="redes-sociais" aria-label="Redes sociais e portfólio">
-          <a href="https://github.com/rrenanreis-dev" target="_blank" rel="noopener noreferrer">GitHub</a>[cite: 32] | 
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>[cite: 32]
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a> | 
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </nav>
 
         <p>
@@ -113,7 +121,7 @@
       <!-- Formulário de Contato -->
       <form
         id="form-contato"
-        action="mailto:renanbatistaalf@email.com"[cite: 32]
+        action="mailto:renanbatistaalf@email.com"
         method="post"
         enctype="text/plain"
         aria-describedby="aviso-formulario"
