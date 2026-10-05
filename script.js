@@ -2,7 +2,33 @@
 
 document.documentElement.classList.add("js");
 
-// 1. Navegação Ativa (Scrollspy)
+// 1. Menu Mobile
+function inicializarMenuMobile() {
+  const btn = document.querySelector(".btn-hamburguer");
+  const menu = document.querySelector(".menu");
+  const links = document.querySelectorAll(".menu-link");
+
+  if (!btn || !menu) return;
+
+  function alternarMenu() {
+    const estaAberto = btn.getAttribute("aria-expanded") === "true";
+    btn.setAttribute("aria-expanded", !estaAberto);
+    btn.setAttribute("aria-label", estaAberto ? "Abrir menu" : "Fechar menu");
+    menu.classList.toggle("menu--aberto");
+  }
+
+  btn.addEventListener("click", alternarMenu);
+
+  links.forEach((link) => {
+    link.addEventListener("click", () => {
+      if (menu.classList.contains("menu--aberto")) {
+        alternarMenu();
+      }
+    });
+  });
+}
+
+// 2. Navegação Ativa (Scrollspy)
 function inicializarNavegacaoAtiva() {
   const links = document.querySelectorAll(".menu-link");
   const secoes = document.querySelectorAll("main section[id]");
@@ -33,7 +59,7 @@ function inicializarNavegacaoAtiva() {
   atualizarLinkAtivo();
 }
 
-// 2. Botão Voltar ao Topo
+// 3. Botão Voltar ao Topo
 function inicializarVoltarTopo() {
   const botaoVoltar = document.querySelector(".voltar-topo");
   if (!botaoVoltar) return;
@@ -47,7 +73,7 @@ function inicializarVoltarTopo() {
   });
 }
 
-// 3. Ano do Rodapé Automático
+// 4. Ano do Rodapé Automático
 function atualizarAnoRodape() {
   const anoRodape = document.querySelector("[data-ano]");
   if (anoRodape) {
@@ -55,7 +81,7 @@ function atualizarAnoRodape() {
   }
 }
 
-// 4. Formulário de Contato
+// 5. Formulário de Contato
 function inicializarFormulario() {
   const formulario = document.querySelector("#form-contato");
   if (!formulario) return;
@@ -139,7 +165,7 @@ function inicializarFormulario() {
   });
 }
 
-// 5. Copiar E-mail
+// 6. Copiar E-mail
 function inicializarCopiaEmail() {
   const botaoCopiar = document.querySelector("#copiar-email");
   const linkEmail = document.querySelector('address a[href^="mailto:"]');
@@ -159,6 +185,7 @@ function inicializarCopiaEmail() {
 }
 
 // Execução ao carregar a página
+inicializarMenuMobile();
 inicializarNavegacaoAtiva();
 inicializarVoltarTopo();
 atualizarAnoRodape();
