@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Renan dos Reis Batista · Currículo e Portfólio</title>
+  <meta name="description" content="Currículo e portfólio profissional de Renan dos Reis Batista — Sistemas de Informação.">
+  <link rel="icon" href="img/marca-camape.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Cabeçalho Principal -->
+  <header class="cabecalho">
+    <a class="marca" href="#inicio" aria-label="Início">
+      Renan Batista
+    </a>
+    <nav class="menu" aria-label="Navegação principal">
+      <ul>
+        <li><a class="menu-link" href="#inicio">Início</a></li>
+        <li><a class="menu-link" href="#sobre">Sobre</a></li>
+        <li><a class="menu-link" href="#formacao">Formação</a></li>
+        <li><a class="menu-link" href="#habilidades">Habilidades</a></li>
+        <li><a class="menu-link" href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+
+    <!-- Seção 1: Início / Apresentação -->
+    <section id="inicio" class="abertura" aria-labelledby="titulo">
+      <figure class="perfil-foto">
+        <img src="img/6331218ebd7fb3aa974b85171eebcfa5.jpg" alt="Foto de perfil de Renan dos Reis Batista" width="160" height="160">
+      </figure>
+      <p class="sobretitulo">Sistemas de Informação · Desenvolvedor</p>
+      <h1 id="titulo">Renan dos Reis <em>Batista</em></h1>
+      <p>Estudante de Sistemas de Informação com foco em desenvolvimento web, engenharia de software e suporte em TI.</p>
+    </section>
+
+    <!-- Seção 2: Sobre -->
+    <section id="sobre" class="secao" aria-labelledby="titulo-sobre">
+      <article class="painel">
+        <p class="sobretitulo">Perfil Profissional</p>
+        <h2 id="titulo-sobre">Sobre <em>Mim</em></h2>
+        <p>Sou acadêmico de Sistemas de Informação no IFSULDEMINAS (Campus Machado) e possuo formação técnica em TI pelo SENAC[cite: 32]. Tenho foco no desenvolvimento de aplicações web, bancos de dados relacionais e criação de jogos no Godot Engine, combinando raciocínio lógico, código limpo e atenção à experiência do usuário.</p>
+      </article>
+    </section>
+
+    <!-- Seção 3: Formação Acadêmica -->
+    <section id="formacao" class="secao" aria-labelledby="titulo-formacao">
+      <article class="painel">
+        <p class="sobretitulo">Educação e Qualificações</p>
+        <h2 id="titulo-formacao">Formação <em>Acadêmica</em></h2>
+        <ul class="lista-formacao">
+          <li>
+            <strong>Bacharelado em Sistemas de Informação</strong><br>
+            IFSULDEMINAS — Câmpus Machado<br>
+            <small>Cursando</small>
+          </li>
+          <li>
+            <strong>Técnico de Informática</strong><br>
+            SENAC Minas<br>
+            <small>Concluído</small>
+          </li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Seção 4: Habilidades -->
+    <section id="habilidades" class="secao" aria-labelledby="titulo-habilidades">
+      <article class="painel">
+        <p class="sobretitulo">Competências Técnicas</p>
+        <h2 id="titulo-habilidades">Linguagens e <em>Tecnologias</em></h2>
+        <ul class="tags-habilidades">
+          <li>HTML5 & CSS3</li>
+          <li>JavaScript</li>
+          <li>C#</li>
+          <li>Python</li>
+          <li>GDScript (Godot)</li>
+          <li>SQL</li>
+          <li>Git & GitHub</li>
+          <li>Suporte em TI</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Seção 5: Contato e Cópia de E-mail -->
+    <section id="contato" class="secao" aria-labelledby="titulo-contato">
+      <aside class="painel canais-contato">
+        <p class="sobretitulo">Canais de Atendimento</p>
+        <h2 id="titulo-contato">Entre em <em>Contato</em></h2>
+        <p>Conecte-se comigo pelas redes sociais ou envie uma mensagem direta.</p>
+
+        <address>
+          E-mail: <a href="mailto:renanbatistaalf@email.com">renanbatistaalf@email.com</a>[cite: 32]
+        </address>
+
+        <nav class="redes-sociais" aria-label="Redes sociais e portfólio">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>[cite: 32] | 
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>[cite: 32]
+        </nav>
+
+        <p>
+          <button id="copiar-email" class="botao" type="button">Copiar e-mail</button>
+        </p>
+        <p id="feedback-copia" role="status"></p>
+      </aside>
+
+      <!-- Formulário de Contato -->
+      <form
+        id="form-contato"
+        action="mailto:renanbatistaalf@email.com"[cite: 32]
+        method="post"
+        enctype="text/plain"
+        aria-describedby="aviso-formulario"
+      >
+        <fieldset>
+          <legend>Enviar uma Mensagem</legend>
+          <p id="aviso-formulario">
+            Preencha os dados para preparar um rascunho diretamente no seu aplicativo de e-mail.
+          </p>
+
+          <p class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" aria-describedby="erro-nome" type="text" name="nome" maxlength="100" autocomplete="name" placeholder="Seu nome" required />
+            <small id="erro-nome" class="erro-campo" hidden></small>
+          </p>
+
+          <p class="campo">
+            <label for="email">E-mail</label>
+            <input id="email" aria-describedby="erro-email" type="email" name="email" maxlength="254" autocomplete="email" placeholder="seu.email@exemplo.com" required />
+            <small id="erro-email" class="erro-campo" hidden></small>
+          </p>
+
+          <p class="campo campo-assunto">
+            <label for="assunto">Assunto</label>
+            <select id="assunto" aria-describedby="erro-assunto" name="assunto" required>
+              <option value="" selected disabled>Selecione uma opção</option>
+              <option>Oportunidade Profissional / Estágio</option>
+              <option>Projeto / Freelance</option>
+              <option>Outro Assunto</option>
+            </select>
+            <small id="erro-assunto" class="erro-campo" hidden></small>
+          </p>
+
+          <p class="campo campo-mensagem">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" aria-describedby="erro-mensagem" name="mensagem" rows="6" maxlength="2000" placeholder="Escreva aqui a sua mensagem..." required></textarea>
+            <small id="erro-mensagem" class="erro-campo" hidden></small>
+          </p>
+
+          <p class="acoes-form">
+            <button class="botao" type="submit">Preparar e-mail <span aria-hidden="true">↗</span></button>
+            <a id="abrir-rascunho" class="botao" hidden>Abrir rascunho no aplicativo de e-mail</a>
+          </p>
+
+          <p id="feedback-formulario" class="feedback-formulario" role="status" aria-live="polite" hidden></p>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- Botão Flutuante de Voltar ao Topo -->
+  <a class="voltar-topo" href="#inicio" aria-label="Voltar ao início da página">
+    <span aria-hidden="true">↑</span>
+  </a>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>© <span data-ano>2026</span> · Renan dos Reis Batista</p>
+    <p>Bacharelado em Sistemas de Informação — IFSULDEMINAS Câmpus Machado</p>
+  </footer>
+
+</body>
+</html>
